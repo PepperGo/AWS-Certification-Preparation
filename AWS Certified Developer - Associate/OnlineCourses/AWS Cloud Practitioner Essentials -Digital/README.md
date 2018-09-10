@@ -5,3 +5,4 @@ In this 100-level self-paced course, you’ll gain an overall understanding of t
 ### Contents
 - [AWS Cloud Practitioner Essentials: Cloud Concepts](./Cloud%20Concepts.md) 
 
+- [AWS Cloud Practitioner Essentials: Core Services](./Core%20Services.md)
