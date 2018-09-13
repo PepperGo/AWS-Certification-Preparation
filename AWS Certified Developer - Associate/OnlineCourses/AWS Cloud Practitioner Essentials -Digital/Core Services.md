@@ -73,4 +73,18 @@ Create a network that supports high availability and uses multiple subnets.
   
 [Amazon Virtual Private Cloud](https://aws.amazon.com/vpc/?hp=tile&so-exp=below)  
 
+### Security Groups
+AWS provides virtual firewalls that can control traffic for one or more instances, called security groups.  
+You can control accessibility to your instances by creating security group rules.  
+These security groups can be managed on the AWS management console.  
+
+### Compute Services  
+AWS offeres flexibility and cost effectiveness. Scalability is built into our compute services.  
+Amazon EC2: allows you complete flexibility to run applications at any scale.  
+Amazon Lambda: allows you run code without provisioning or managing servers.  
+Amazon Lightsail: simple website or e-commerce applications  
+Amazon ECS: supports Docker containers and allows you to easily run applications on a managed cluster of Amazon EC2 instances.  
+...  
+
+### Amazon Elastic Compute Cloud(EC2)  
 
