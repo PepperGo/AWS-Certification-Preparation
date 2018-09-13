@@ -22,9 +22,55 @@ CloudFront is used to deliver content to your customers. Requests for content ar
 [Amazon CloudFront Edge Infrastructure](https://aws.amazon.com/cloudfront/details/)  
 
 
+### Amazon Virtual Private Cloud(VPC)
+#### Introduction
+Amazon VPC is an AWS foundational service and integrates with numerous AWS services. (Amazon EC2, Amazon EMR, Amazon RDS...)
 
+Amazon VPC
+- allows to create a private network in the AWS cloud
+  - Uses same concepts as on premise networking
+- allows complete control of network configuration(IP address spaces, subnets, and routing tables)
+  - Ability to isolate and expose resources inside VPC
+- offers serveral layers of security controls(isolating subnets, defining access control lists, customizing routing rules)
+  - Ability to allow and deny specific internet and internal traffic
+- other AWS services deploy into VPC
+  - Services inherent security built into network
 
-
-
+#### Features
+- Builds upon high availability of AWS Regions and Availablity Zones(AZ)  
+  - Amazon VPC lives within a Region  
+  - Can create multiple VPCs per account  
+  
+- Subnets(A VPC defines an IP address space that is then divided by subnets)  
+  - Used to divide Amazon VPC  
+  - Allows Amazon VPC to span multiple AZs  
+  - Can be classified as public or private   
+  - public(having direct access to the Internet; we need to attach an Internet gateway(IGW) to the VPC and update the route table of the public subnet to send non-local traffic to the Internet gateway)   
+  - private(not having direct access to the Internet; NAT Gateway)    
+  
+- Route tables  
+  - Control traffic between subnets and the Internet(By default, all subnets within a VPC can communicate with each other)  
+- Internet Gateway(IGW)   
+  - Allows access to the Internet from Amazon VPC  
+- NAT Gateway   
+  - Allows private subnet resources to access Internet  
+- Network Access Control Lists(NACL)  
+  - Control access to subnets; stateless  
+  
+ 
+#### Example VPC
+Create a network that supports high availability and uses multiple subnets.  
+1. Select a region(since VPC is region based)  
+  select the Oregon Region(us-west-2)  
+2. Create the VPC, and define the IP address space for the VPC
+  create the vpc named Test-VPC, and 10.0.0.0/16 is the classless interdomain routing(CIDR) format means having more than 65,000 IP addresses to use in the VPC  
+3. Create a subnet and specifiy the AZs
+  create a subnet named Subnet A1, assigned an IP address space(CIDR is 10.0.0.0/24) that contains 256 IP addresses, and specify that this subnet will live in an Availability Zone A.  
+4. Create other subnets  
+  create another subnet in Availablity Zone A called Subnet B1, assin an IP address space(CIDR is 10.0.2.0/23) that contains 512 IP addresses.
+5. Create an Internet gateway(IGW)  
+  create an Internet gateway called Test-IGW, Subnet A1 becomes a public subnet where non-local traffic is routed through the Internet gateway. Subnet A2 becomes will be the private subnet that is isolated from the Internet.  
+  
+[Amazon Virtual Private Cloud](https://aws.amazon.com/vpc/?hp=tile&so-exp=below)  
 
 
