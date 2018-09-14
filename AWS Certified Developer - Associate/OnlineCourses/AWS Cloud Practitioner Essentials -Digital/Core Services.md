@@ -87,4 +87,41 @@ Amazon ECS: supports Docker containers and allows you to easily run applications
 ...  
 
 ### Amazon Elastic Compute Cloud(EC2)  
+EC2: Elastic Compute Cloud
+- Elastic  
+  - if properly configured, you can increase and decrease the amount of servers required by an application automatically according to the current demands on that application.(Stop calling them servers, use the name of Amazon EC2 instances)   
+- Compute  
+  - Compute refers to the compute, or server, resources that are being presented(Application Server, Web Server, Database Server, Game Server...)  
+- Cloud  
+  - Cloud refers to the fact that these are cloud-hosted compute resources  
+  
+#### Amazon EC2 Instances
+- Pay as you go  
+- Broad selection of HW/SW  
+- Global hosting  
+
+[Amazon EC2](aws.amazon.com/ec2)  
+
+#### How to build and configure and EC2 instance  
+- Login in AWS Console  
+- Choose a region  
+- Launch EC2 Wizard  
+- Select Amazon Machine Image(AMI)(Software)  
+- Select instance type(Hardware)  
+- Configure network  
+- Configure storage  
+- Configure tags  
+- Configure Sercurity Group  
+- Configure key pairs(download private key, eg: ec2-demo.pem)  
+- Launch & Connect  
+
+#### How to access EC2 Instance
+- Description -> public DNS(IPv4) and public IPv4 IP address  
+- puttygen.exe -> ec2-demo.pem -> save private key -> ec2-demo.ppk
+- putty.exe -> user: EC2-user@+DNS -> select SSH -> Auth -> Browse -> private key file -> ec2-demo.ppk -> open  
+- login in  
+
+### AWS Lambda  
+
+
 
