@@ -122,6 +122,24 @@ EC2: Elastic Compute Cloud
 - login in  
 
 ### AWS Lambda  
+AWS Lambda is a compute service that lets you run code without provisioning or managing service. AWS Lambda executes code only when needed and scales automatically to thousands of requests per second.  Pay as you go -> ideal for varibale and intermittent workloads.  
+
+- Fully-Managed serverless compute  
+- Event-driven execution  
+- Sub-second metering  
+- Multiple languages supported  
+
+AWS Lambda is intended to support serverless and microservices applications.  
+#### Some configuration
+disc space, memory allocation, execution time, 
+#### Create a Lambda Function
+AWS Lambda -> Create Function page console -> Create Function -> Configuration
+
+Real-Time Image Processing  
+Extract, Transform, Load piplines  
+Microservices backend  
+
+
 
 
 
