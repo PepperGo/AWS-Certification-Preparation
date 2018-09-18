@@ -153,12 +153,68 @@ Elastic Beanstalk provides all the application service, HTTP service, operating 
 The only need that you have is to create your code, deploy it, prepare it according to the needs of your service.  
 
 #### Deployment and Updates  
--7. Update your application as easily as you deployed it  
+- 7. Update your application as easily as you deployed it  
 
 #### Product Demonstration  
 1. Start Service -> Go to dashboard and look for Elastic Beanstalk -> Create New Application -> name/description    
 2. Create one environment -> Web server enviroment/Worker environment -> select -> Enviroment information/Base configuration  -> configure more options(Software, Instances, Database...) -> Create environment  
 (Can also use command line interface and scripts)  
+
+
+### Application Load Balancer  
+#### What is the Application Load Balancer?  
+- The second type of the Elastic Load Balancing(ELB) service  
+- offer most of the features provided by the Classic Load Balancer, adds some important features and enhancements(Supported protocols, CloudWatch Metrics, Access Logs, Health Checks...)  
+
+#### Why use the Application Load Balancer?  
+##### THe ability to use containers to host your micro services and route to those applications from a single load balancer.  
+Application Load Balancer allows you to route different requests to the same instance, but differ the path based on the port.  If you have different containers listening on various ports, you can set up routing rules to distribute traffic to only the desired backend application.  
+
+**Key Terms**  
+- Listeners  
+  - A listener is a process that checks for connection requests, using the protocol and port taht you configure. The rules that you define for a listener determine how the load balancer routes requests to the targets in one or more target groups.  
+- Target  
+  - A target is a destination for traffic based on the established listener rules.
+- Target Group  
+  - Each target group routes requests to one or more registered targets using the protocol and port number specified. A target can be registered with multiple target groups. Health checks can be configured on a per target group basis.  
+ 
+#### Features 
+- Supported Protocols  
+  - HTTP, HTTPS, HTTP/2, and WebSockets  
+- CloudWatch Metrics  
+  - Additional load balance metrics and Target Group metric dimension  
+- Access Logs  
+  - Ability to see connection details for WebSocket connections  
+- Health Checks  
+  - Insight into target and application health at more granular level  
+
+#### Demonstration  
+##### Create Load Balancer
+- 1. AWS console -> EC2 Console -> already have two instances running  
+- 2. side navigation pane -> Load Balancers -> Create Load Balancer -> Application Load Balancer   
+- 3. Step 1: Configure Load Balancer(Basic Configuration, Listeners, Avaliability Zones. Tags) -> Next: Configure Sercurity Settings  
+- 4. Step 2: Configure Security Settings -> Next: Configure Security Groups  
+- 5. Step 3: Configure Security Groups -> Next: Configure Routing  
+- 6. Step 4: Configure Routing(Target Group, Health Checks)  -> Next: Register Targets  
+- 7. Step 5: Register Targets(Registered targets, Instances)  -> Next: Review
+- 8. Step 6: Review -> Create  
+
+##### Create Target Group
+Because we have two targets that we want to check with this load balancer, in order to register the second target, we must first create a target group.  
+- 1. side navigation pane -> Target Groups -> create target group
+Then, check the configuration(both ports set up for the listening on the load balancer)  
+- 2. View and Edit Rules -> THEN -> forware to demo2  -> update  
+
+##### Test and Verify 
+
+
+
+
+
+
+
+
+
 
 
 
