@@ -139,6 +139,35 @@ Real-Time Image Processing
 Extract, Transform, Load piplines  
 Microservices backend  
 
+### AWS Elastic Beanstalk
+#### What is Elastic Beanstalk?
+- 1. Platform as Service(have the whole infrastructure and the whole platform that can put code over the system as required)  
+- 2. Allows quick deployment of your applications  
+- 3. Reduces management complexity  
+- 4. Keep control in your hand(also can have full control like instance type. database, adjust Auto Scaling, update application, access server log files, enable HTTPS on the load balancer...)  
+- 5. Supports a large range of platforms(Package Builder, Single Container/Multicontainer/Preconfigured Docker, Go, Java SE, Java with Tomcat, .NET on Windows Server with IIS, Node.js, PHP, Python, Ruby)  
+
+#### Components
+- 6. Easily Implemented  
+Elastic Beanstalk provides all the application service, HTTP service, operating system, language interpreter, and the host.  
+The only need that you have is to create your code, deploy it, prepare it according to the needs of your service.  
+
+#### Deployment and Updates  
+-7. Update your application as easily as you deployed it  
+
+#### Product Demonstration  
+1. Start Service -> Go to dashboard and look for Elastic Beanstalk -> Create New Application -> name/description    
+2. Create one environment -> Web server enviroment/Worker environment -> select -> Enviroment information/Base configuration  -> configure more options(Software, Instances, Database...) -> Create environment  
+(Can also use command line interface and scripts)  
+
+
+
+
+
+
+
+
+
 
 
 
