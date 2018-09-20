@@ -208,6 +208,68 @@ Then, check the configuration(both ports set up for the listening on the load ba
 ##### Test and Verify 
 
 
+### Amazon Elastic Load Balancer  
+#### Elastic Load Balancer(Classic Load Balancer)
+The Classic Load Balancer is a distributed software load balancing service that enables the use of many helpful features packaged into a managed solution.   
+Use Cases:  
+- Access through single point  
+- Decouple application environment  
+- Provide high availability and fault tolerance    
+- Increase elasticity and scalability  
+
+#### Traffic Distribution  
+The ability for the Elastic Load Balancing to distribute traffic depends on what type of request you are distributing.
+
+- 1. HTTP/HTTPS
+Elastic Load Balancing will use a **Least Outstanding** request for the back end instances.
+- 2. TCP
+Elastic Load Balancing will use a simple **round robin** for these reuqests.  
+
+The Elastic Load Balancing also helps with distributing traffic across multiple Availability Zones.  
+
+- 1. The Elastic Load Balancing provides a single exposed point of access for accessing your backend instances.  
+  - The easiest way to do this would be to set up an alias record to point to your domain's CNAME to the endpoint for your Elastic Load Balancing.  
+- 2. Sticky Sessions bind a user session for the duration of that session.   
+  - Duration-based cookies or Application-controlled cookies  
+  
+#### Monitoring  
+Elastic Load Balancing provides many metrics by dafault.  
+These metrics allow you to:  
+- View HTTP responses  
+- See number of healthy and unhealthy hosts(done with a simple attempted connection or ping requests to the backend EC2 instance)  
+- Filter these metrics based on Availability Zones or Load Balancer  
+
+#### Scalability  
+The Load Balancer helps with scalability by providing multizone load balancing, which enables to distribute traffic across multiple Availability Zones within your VPC.  
+Also, the load balancer itself will scale based on the traffic pattern that it sees.  
+
+##### With the Classic Load Balancer, you have the ability to create different types of load balancers.  
+- Internet-Facing Load Balancers  
+  - This gives you a pulicly resolvable DNS name that still allows your cross-zone balancing and allows you to route requests to the backend instances from your single exposed endpoint of your load balancer.  
+- Internal Load Balancers  
+  - This internal load balancer has a DNS name that resolves only to private nodes so it can only be accessed through the VPC. This provides a decoupling of your infrastructure within your VPC and allows for the scalability of both the front-end and the backend instances while the load balancer handles its own scaling.
+  
+##### Demonstration  
+- 1. Have already launched an EC2 instance -> This EC2 instance is sitting in a VPC with an internet gateway attacked, and it is sitting in a public subnet(verify: take public IP address for this instance)  
+- 2. Navigation Pane -> Load Balancing -> Load Balancers -> Create Load Balancer -> Classic Load Balancer 
+- 3. Step 1: Define Load Balancer  
+- 4. Step 2: Assign Security Groups 
+- 5. Step 3: Configure Security Settings  
+- 6. Step 4: Configure Health Check  
+- 7. Step 5: Add EC2 Instances  
+- 8. Step 6: Add tags  
+- 9. Step 7: Review and Create  
+
+Result: We can go to the instance through the load balancer instead of to the instance directly.  
+
+
+
+
+
+
+
+
+
 
 
 
