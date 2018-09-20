@@ -263,6 +263,54 @@ Also, the load balancer itself will scale based on the traffic pattern that it s
 Result: We can go to the instance through the load balancer instead of to the instance directly.  
 
 
+### Auto Scaling  
+#### What is Auto Scaling?
+Auto Scaling helps you ensure that you have the correct number of Amazon EC2 instances available to handle the load for your application.   
+#### Monitoring Resource Performance  
+When running applications on EC2 instances, it's critical to monitor the performance of your workload using Amazon CloudWatch.   
+However, CloudWatch will not add or remove EC2 instances, and this is where Auto Scaling comes into the picture.    
+
+AutoScaling allows to add or remove EC2 instances based on conditions that you specify. And AutoScaling answers two critical questions:   
+- How can I ensure that my workload has enough EC2 resources to meet fluctuating performance requirements?(Scalability)  
+- How can I automate EC2 resource provisioning to occur on-demand?(Automation)    
+
+#### Scaling  
+##### Scaling in && Scaling out  
+Auto Scaling can automatically adjust the number of EC2 instances running in your workload based on either conditions you define, CPU utilization over 80%, or scheduled.
+- Scaling out  
+  - Auto Scaling adds more instances  
+- Scaling in  
+  - Auto Scaling terminated instances  
+  
+#### How do you auto scale?   
+There are three components required for auto-scaling.  
+- Launch Configuration  
+  - This is about defining what will be launched by Auto Scaling.(Such as which Amazon Machine Image to use, what instance type, security groups, or roles to apply to the instance)  
+- Create Auto Scaling Group   
+  - This is about defining where the deployment takes place and some boundaries for the deployment.(Where you define which VPC to deploy instances, in which load balancer to interact with, specify the boundaries for a group)  
+- Auto Scaling policy  
+  - This is about specifying when to launch or terminate EC2 instances.(schedue Auto scaling every Thursday at 3pm, or create conditions that define thresholds to trigger adding or removing instances)  
+
+##### Dynamic Auto Scaling  
+Condition-based policies make Auto Scaling dynamic and able to meet fluctuating requirements.  
+
+- How does dynamic Auto Scaling work?  
+One common configuration is to create CloudWatch alarms based on performance information from your EC2 instances or a load balancer.  
+When a performance threshold is breached, a CloudWatch alarm triggers an Auto Scaling event which either scales out or scales in EC2 isntances in the enviroment.  
+
+#### Demonstration  
+1. Create a Launch Configuration  
+AutoScaling -> Auto Scaling Group -> Create Launch Configuration  
+2. Create an Auto Scaling Group  
+3. Create an Auto Scaling policy  
+4. Trigger Auto Scaling  
+
+
+
+
+
+
+
 
 
 
