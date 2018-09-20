@@ -305,6 +305,23 @@ AutoScaling -> Auto Scaling Group -> Create Launch Configuration
 3. Create an Auto Scaling policy  
 4. Trigger Auto Scaling  
 
+### Amazon Elastic Block Store(EBS)
+EBS volumes can be used as a storage unit for your Amazon EC2 instances, so whenever you think you need disk space for your instances running on AWS, you can think about them.
+- These volumes can be hard disks or SSD devices  
+- Pay as you use  
+- Persistent and customizable block storage for EC2 instances.  
+- Replicated across multiple servers in the same Availability Zone  
+- Backup using snapshots  
+- Easy and transparent Encryption  
+- Elastic volumes  
+
+#### Demonstration  
+1. EC2 -> ELASTIC BLOCK STORE -> Volumes -> Create Volume
+2. Actions -> Attach Volume
+3. Instances -> Connect  -> terminal cmd
+
+
+
 
 
 
