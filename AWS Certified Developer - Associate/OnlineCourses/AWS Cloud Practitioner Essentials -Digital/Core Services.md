@@ -320,6 +320,49 @@ EBS volumes can be used as a storage unit for your Amazon EC2 instances, so when
 2. Actions -> Attach Volume
 3. Instances -> Connect  -> terminal cmd
 
+### Amazon Simple Storage Service(S3)  
+#### What is Amazon S3?
+- Managed cloud storage service  
+  - provides a simple API for storing and retrieving data  
+  - data store in S3 isn't associated with any particular server, and you don't have to manage any infrastructure yourself  
+- Store virtually unlimited number of objects
+  - any data file, store as many as objects into S3
+- Access any time, from anywhere  
+  - S3 provides low-latency access to the data over the internet by HTTP or HTTPS  
+  - You can also access S3 privately through a virtual private cloud endpoint  
+- Rich security controls  
+  - identity and access management policies, S3 bucket policies, and even per-object access control lists  
+  - By default, none of the data is shared publicly  
+  - Can encrypt data in transit and choose to enbale server-side encryption on your objects  
+  
+### How to store in S3?
+1. create a bucket to hold data -> put data into bucket as an object -> need to specify a key(this key is used to retrieve object later).  
+2. When you create a bucket in S3, it's associated with a particular AWS region. Whenever you store data in the bucket, it's redundantly stored across multiple AWS facilities within your selected region.  
+3. S3 will automatically manage the storage behind your bucket even as your data grows.  
+4. S3 will also scale to handle a high volume of requests.  
+
+### How to access S3?  
+- AWS management console  
+- AWS CLI  
+- AWS SDKs  
+- Access data in your bucket directly via the rest endpoints  
+
+### Common Use cases  
+- Storing Application Assets  
+- Static Web Hosting  
+- Backup & Disaster Recovery  
+- Staging area for Big Data  
+- Many more...  
+
+### Demonstration  
+1. Amazon S3 Management Console -> Create bucket  
+2. Click new created bucket -> upload/Create folder  
+Can also use AWS CLI(s3 commands)  
+
+
+
+
+
 
 
 
