@@ -417,10 +417,52 @@ With S3, your application has to initiate the server-side encryption instead.
 1. AWS Management Console -> Storage -> Glacier -> Create Vault  
 2. Create  
 
+### Amazon Relational Database Service(Amazon RDS)
+#### Why Amazon RDS?
+##### Challenges of running a standalone Relational Databases
+- Server maintenance and energy footprint  
+- Software install and patches  
+- Database backups and high availability  
+- Limits on scalability  
+- Data security  
+- OS install and patches  
 
+Amazon RDS is a managed service that sets up and operates a relational database in the cloud.  
+With Amazon RDS, your primary focus becomes data and optimizing application.  
 
+#### Brief Overview of Amazon RDS  
+The basic building block of Amazon RDS is the database instance.  
+**A database instance** is an isolated database environment that can contain multiple user-created databases, and can be accessed by using the same tools and applications that you use with a standalone database instance.
 
+- DB Instance Class  
+  - CPU  
+  - Memory  
+  - Network performance  
+- DB Instance Storage(types of disks)  
+  - Magnetic  
+  - General purpose(SSD)  
+  - Provisioned IOPS  
+  
+Usually the database instance is isolated in a private subnet and is only made directly accessible to indicated application instances.   
+Subnets in an Amazon VPC are associated with a single Availability Zone, so when you select the subnet, you're also choosing the Availability Zone or physical location for your database instance.  
 
+##### Standby Copy 
+1. Once configuredd, Amazon RDS automatically generates a standby copy of the database instance in another Availability Zone within the same Amazon VPC.  
+2. After seeding the database copy, transactions are synchronously replicated to the standby copy.  
+3. Running a database instance with Multi-Availability Zones can enhance availability during planned system maintenance and help protect databases against database instance failure and Availability Zone disruption.  
+4. If the master database instance fails, Amazon RDS automatically brings the standby database instance online as the new master.  
+
+##### Read Replicas
+Updates made to the source database isntance are asynchronously copied to the **read replica isntance**.
+- Asynchronous replication method used  
+- Offload read queries from the master DB instance   
+- Ideal for read-heavy database workloads  
+- Read replica can be promoted to Master if needed  
+
+Read replicas can be created in a different region than the master database.  
+It can help:  
+- 1. Satisfy disaster recovery requirements
+- 2. Cutting down on latency by directing reads to a read replica closer to the user  
 
 
 
