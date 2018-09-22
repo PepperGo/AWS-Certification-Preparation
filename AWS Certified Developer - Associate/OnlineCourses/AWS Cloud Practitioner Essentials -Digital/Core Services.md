@@ -360,6 +360,68 @@ EBS volumes can be used as a storage unit for your Amazon EC2 instances, so when
 Can also use AWS CLI(s3 commands)  
 
 
+### Amazon Glacier  
+Amazon Glacier is in the storage service category, and it's low-cost data archiving solution.  
+It's designed for storing cold data that's infrequently accessed, yet must be retained for business or legal reasons.  
+- long-term storage at low cost  
+  - Unlike with Amazon S3, Glacier is not designed to store data that has been accessed frequently. Instead, it is designed for long-term storage at low cost.    
+- 99.999% durability  
+  - By redundantly storing data in multiple facilities and on multiple devices within each facility  
+- Access limited by vault policies  
+  - Control access  
+  
+#### Three key terms  
+- Archive  
+  - An Archive is any object, such as a photo, video file, or document, that you store in Glacier.  
+  - It's the base unit of storage in Glacier.  
+  - Each Archive has its own unique ID and can also have a description if you can choose.  
+- Vault  
+  - A vault is a container for storing archives.  
+  - When creating a vault, need to specify vault name and an AWS region in which you would like to create the vault.  
+  - Vault access policies determine who can and cannot access the data stored in the vault, as well as what operations users can and cann't perform.  
+
+#### How can you store and access data in Glacier?  
+- AWS Management Console  
+  - Limited operations available(creating and deleting vaults, creating and managing archive policies)  
+- RESTful web service, Java or .NET AWS SDKs(via AWS Command Line Interface, AWS CLI)  
+- Amazon S3(Using lifecycle policies)  
+
+##### Lifecycle Policy 
+A lifecycle policy that moves data as it ages from Amazon S3 into Glacier before it has been finally deleted.  
+
+Amazon S3 Standard ->(30 days) -> Amazon S3 Standard - Infrequent Access -> 60 days -> Amazon Glacier ->365 days -> Deleted  
+Then, if on an extremely rare occassion that preview is needed again, your application sess that the file is deleted and simply generates a new one.  
+
+##### Retreving data in Glacier  
+Data retrieval for Glacier is in minutes and hours rather than milliseconds like in S3.  
+**Three Options for retrieving the data and with varying access times and costs:**  
+1. Bulk(low cost, 5-12 hours)  
+2. Standard(3-5 hours)  
+3. Expedited(1-5 minutes)  
+
+#### Storage Comparision  
+##### Basic Differences
+Amazon S3: high cost in storage, low cost in retrieval, low-latency access 
+Amazon Glacier: low cost in storage, high cost in retrieval, low-cost, long-term storage  
+
+##### Another difference - how data is Encryption  
+Both Amazon S3 and Amazon Glacier can be stored over HTTPS, but with Glacier, any data archive there is encrypted by default.  
+With S3, your application has to initiate the server-side encryption instead.  
+
+#### Security with Amazon Glacier  
+- Control access with AWS Identity and Access Management(IAM)  
+- Glacier encrypts your data with AES-256  
+- Glacier manages your keys for you  
+
+#### Demonstration  
+1. AWS Management Console -> Storage -> Glacier -> Create Vault  
+2. Create  
+
+
+
+
+
+
 
 
 
