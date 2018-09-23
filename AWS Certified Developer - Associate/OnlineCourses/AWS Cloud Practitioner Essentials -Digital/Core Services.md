@@ -464,7 +464,29 @@ It can help:
 - 1. Satisfy disaster recovery requirements
 - 2. Cutting down on latency by directing reads to a read replica closer to the user  
 
+### Amazon DynamoDB  
+#### What is DynamoDB?
+- Amazon DynamoDB is a fully managed NoSQL database service.  
+- Store as many items as you want  
+- Items may have differing attributes  
+- Low-latency queries  
+- Scalable read/write throughput(auto-scaling)  
 
+#### Partitioning  
+Table data is partitioned and indexed by primary key.    
+Two ways to retrieve data:  
+1. Query by key to find items efficiently  
+2. SCAN to find items by any attribute(less efficient, as DynamoDB will scan through all the items in the table to find the ones that match your criteria)  
+
+#### How to build Key  
+1. You can set up a simple primary key based on a single attribute of the data values with a uniform distribution, such as the GUID or other random identifiers.  
+2. Alternatively, you can specify a compound key, which will be composed of a partition key and a secondary key.  
+
+#### Demonstration  
+1. AWS Management Console -> Amazon DynamoDB -> Create DynamoDB table  
+2. Create DynamoDB table  
+3. Create items  
+4. Query items
 
 
 
