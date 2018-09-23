@@ -488,7 +488,22 @@ Two ways to retrieve data:
 3. Create items  
 4. Query items
 
+### Amazon Redshift  
+Amazon Redshift is a fast, fully, managed data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and your existing business intelligence tools.    
+It allows you to run complex analytic queries against petabytes of structured data using sophisticated query optimization, columnar storage on high performance local disks, and massively parallel query execution.  
 
+#### Key features  
+##### Parallel Processing Architecture  
+Redshift employs a massively parallel processing architecute coupled with columnar storage and automatic compression to deliver very fast query performance over petabyte-size data sets.   
+
+##### Automation and Scaling  
+1. It's simple to automate most of the administrative tasks to manage, monitor, and scale your Redshift cluster, freeing you up to focus on your data and business.  
+2. Scalability is intrinsic in Redshift, and your cluster can be scaled up and down as your needs change with just a few clicks on the console.  
+3. Security, it's built in, providing for strong encryption of your data both at rest and in transit.  
+4. Compatible with the tools you know and use, supporting standard SQL and providing high-performance JDBC and ODBC connectors allows you to use the SQL clients and business intelligence tools of your choice.  
+
+#### Demonstration  
+AWS management Console -> Redshift dashboard  
 
 
 
