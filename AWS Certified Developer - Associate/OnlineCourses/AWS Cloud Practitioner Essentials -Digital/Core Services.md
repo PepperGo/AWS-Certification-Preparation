@@ -1,5 +1,24 @@
 ## AWS Cloud Practitioner Essentials: Core Services  
 
+### Table of contents
+* [AWS Global Infrastructure](#aws-global-infrastructure)
+* [Amazon Virtual Private Cloud(VPC)](#amazon-virtual-private-cloud)
+* [Security Groups](#security-groups)
+* [Compute Services](#compute-services)
+* [Amazon Elastic Compute Cloud(EC2)](#amazon-elastic-compute-cloud)
+* [AWS Lambda](#aws-lambda)
+* [AWS Elastic Beanstalk](#aws-elastic-beanstalk)
+* [Application Load Balancer](#application-load-balancer)
+* [Amazon Elastic Load Balancer](#amazon-elastic-load-balancer)
+* [Auto Scaling](#auto-scaling)
+* [Amazon Elastic Block Store(EBS)](#amazon-elastic-block-store)
+* [Amazon Glacier](#amazon-glacier)
+* [Amazon Relational Database Service(Amazon RDS)](#amazon-relational-database-service)
+* [Amazon DynamoDB](#amazon-dynamodb)
+* [Amazon Redshift](#amazon-redshift)
+* [Amazon Aurora](#amazon-aurora)
+* [AWS Trusted Advisor](#aws-trusted-advisor)
+
 ### AWS Global Infrastructure  
 AWS's global infrastructure can be broken down into three topics: regions, availability zones, and edge locations.  
 #### Regions  
@@ -22,7 +41,7 @@ CloudFront is used to deliver content to your customers. Requests for content ar
 [Amazon CloudFront Edge Infrastructure](https://aws.amazon.com/cloudfront/details/)  
 
 
-### Amazon Virtual Private Cloud(VPC)
+### <a id = "amazon-virtual-private-cloud">Amazon Virtual Private Cloud(VPC)</a>
 #### Introduction
 Amazon VPC is an AWS foundational service and integrates with numerous AWS services. (Amazon EC2, Amazon EMR, Amazon RDS...)
 
@@ -86,7 +105,7 @@ Amazon Lightsail: simple website or e-commerce applications
 Amazon ECS: supports Docker containers and allows you to easily run applications on a managed cluster of Amazon EC2 instances.  
 ...  
 
-### Amazon Elastic Compute Cloud(EC2)  
+### <a id="amazon-elastic-compute-cloud">Amazon Elastic Compute Cloud(EC2)</a>  
 EC2: Elastic Compute Cloud
 - Elastic  
   - if properly configured, you can increase and decrease the amount of servers required by an application automatically according to the current demands on that application.(Stop calling them servers, use the name of Amazon EC2 instances)   
@@ -305,7 +324,7 @@ AutoScaling -> Auto Scaling Group -> Create Launch Configuration
 3. Create an Auto Scaling policy  
 4. Trigger Auto Scaling  
 
-### Amazon Elastic Block Store(EBS)
+### <a id="amazon-elastic-block-store">Amazon Elastic Block Store(EBS)</a>
 EBS volumes can be used as a storage unit for your Amazon EC2 instances, so whenever you think you need disk space for your instances running on AWS, you can think about them.
 - These volumes can be hard disks or SSD devices  
 - Pay as you use  
@@ -335,26 +354,26 @@ EBS volumes can be used as a storage unit for your Amazon EC2 instances, so when
   - By default, none of the data is shared publicly  
   - Can encrypt data in transit and choose to enbale server-side encryption on your objects  
   
-### How to store in S3?
+#### How to store in S3?
 1. create a bucket to hold data -> put data into bucket as an object -> need to specify a key(this key is used to retrieve object later).  
 2. When you create a bucket in S3, it's associated with a particular AWS region. Whenever you store data in the bucket, it's redundantly stored across multiple AWS facilities within your selected region.  
 3. S3 will automatically manage the storage behind your bucket even as your data grows.  
 4. S3 will also scale to handle a high volume of requests.  
 
-### How to access S3?  
+#### How to access S3?  
 - AWS management console  
 - AWS CLI  
 - AWS SDKs  
 - Access data in your bucket directly via the rest endpoints  
 
-### Common Use cases  
+#### Common Use cases  
 - Storing Application Assets  
 - Static Web Hosting  
 - Backup & Disaster Recovery  
 - Staging area for Big Data  
 - Many more...  
 
-### Demonstration  
+#### Demonstration  
 1. Amazon S3 Management Console -> Create bucket  
 2. Click new created bucket -> upload/Create folder  
 Can also use AWS CLI(s3 commands)  
@@ -417,7 +436,7 @@ With S3, your application has to initiate the server-side encryption instead.
 1. AWS Management Console -> Storage -> Glacier -> Create Vault  
 2. Create  
 
-### Amazon Relational Database Service(Amazon RDS)
+### <a id="amazon-relational-database-service">Amazon Relational Database Service(Amazon RDS)</a>
 #### Why Amazon RDS?
 ##### Challenges of running a standalone Relational Databases
 - Server maintenance and energy footprint  
