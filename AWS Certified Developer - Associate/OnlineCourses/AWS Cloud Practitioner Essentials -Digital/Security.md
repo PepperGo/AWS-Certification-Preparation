@@ -1,7 +1,9 @@
 ## AWS Cloud Practitioner Essentials: Security
 
 ### Conents
-* [Introduction to AWS Security](#introduction-to-aws-sercurity)
+* [Introduction to AWS Security](#introduction-to-aws-sercurity)  
+* [The AWS Shared Responsibility Model](#the-aws-shared-responsibility-model)  
+
 
 ### Introduction to AWS Security
 ##### Keep your data safe
@@ -57,4 +59,7 @@
 ##### AWS Marketplace  
 - Partner security porducts  
 - Complement AWS features and tools  
+
+### The AWS Shared Responsibility Model  
+
 
