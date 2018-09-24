@@ -506,6 +506,27 @@ Redshift employs a massively parallel processing architecute coupled with column
 AWS management Console -> Redshift dashboard  
 
 
+### Amazon Aurora  
+Amazon Aurora is a MySQL relational database engine that combines the speed and availability of high-end commercial databases with the simplicity and cost-effectiveness of open-source databases.  
+
+#### Service Benefits  
+1. Simple  
+2. compatible  
+3. Fast and available  
+4. Managed service, it integrates with such features as AWS Database Migration Service, as well as the AWS Schema Conversion Tool, which can help you move your data set into Amazon Aurora seamlessly and with great alacrity  
+5. Pay-as-you-go  
+
+##### Managed Service  
+Database on-premises -> Database in Amazon EC2 -> Database in Amazon RDS or Amazon Aurora  
+
+#### Amazon RDS versus Amazon Aurora  
+1. Highly Available. Amazon Aurora is highly available, storing six copies of your data across three Availability Zones with continuous backups to Amazon S3.  
+2. Resilient Design. Amazon Aurora is designed forinstant crash recovery in the event that your primary database becomes unhealthy.  
+  Amazon Aurora does not need to replay the Redo log from the last database checkpoint. Instead, it performs this on every read operation. This reduces restart time after a database crash to less than 60 seconds in most cases.  
+  Amazon Aurora has moved the buffer cache out of the database process and makes it available immediately at restart time. This prevents you from having to throttle access until the cache is repopulated to avoid brownouts.  
+  
+#### Demonstration  
+Amazon RDS console ->Instances -> Launch a new database instance  
 
 
 
