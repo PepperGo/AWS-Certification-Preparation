@@ -529,32 +529,17 @@ Database on-premises -> Database in Amazon EC2 -> Database in Amazon RDS or Amaz
 Amazon RDS console ->Instances -> Launch a new database instance  
 
 
+### AWS Trusted Advisor  
+Trusted Advisor is a tool that gives the best practices and checks all of your resources in your account to see if they're in accordance with those best practices. And it does this in four different categories: security, fault tolerance, performance, and cost optimization.  
+#### How does Trusted Advisor work?  
+Trusted Advisor compares your account resources with established best practices, and wends out data in the form of checks.  
+Now, Trusted Advisor not only surfaces these best practices in the form of console, but also has an API.  
+In addition to that, you can get notifications of specific checks when they are falling so that you can take action on them.  
+You can also bring in automation, beacuse Trusted Advisor is integrated with Amazon CloudWatch Events, which can use services like AWS Lambda so that you can take automatic actions and automate the optimization of your resouces.  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### Demonstration  
+The main landing page is the overall dashboard.  
 
 
 
