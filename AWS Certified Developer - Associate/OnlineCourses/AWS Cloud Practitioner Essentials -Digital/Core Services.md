@@ -12,6 +12,7 @@
 * [Amazon Elastic Load Balancer](#amazon-elastic-load-balancer)
 * [Auto Scaling](#auto-scaling)
 * [Amazon Elastic Block Store(EBS)](#amazon-elastic-block-store)
+* [Amazon Simple Storage Service(S3)](#amazon-simple-storage-service)
 * [Amazon Glacier](#amazon-glacier)
 * [Amazon Relational Database Service(Amazon RDS)](#amazon-relational-database-service)
 * [Amazon DynamoDB](#amazon-dynamodb)
@@ -339,7 +340,7 @@ EBS volumes can be used as a storage unit for your Amazon EC2 instances, so when
 2. Actions -> Attach Volume
 3. Instances -> Connect  -> terminal cmd
 
-### Amazon Simple Storage Service(S3)  
+### <a id="amazon-simple-storage-service">Amazon Simple Storage Service(S3)</a>  
 #### What is Amazon S3?
 - Managed cloud storage service  
   - provides a simple API for storing and retrieving data  
