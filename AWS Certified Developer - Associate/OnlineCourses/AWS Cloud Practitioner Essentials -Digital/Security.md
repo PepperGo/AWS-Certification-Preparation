@@ -76,6 +76,9 @@ customers maintain complete control over their content and are responsible for m
 - Who has access to that content  
 - Access rights  
 
+Customers can use AWS Service catalog to create and manage catalogs of IT services that have been approved for use on AWS.  
+AWS products that fall into the category of laaS, such as Amazon EC2, and Amazon VPC, are completely under the customer's control which requires them to perform all of the necessary sercurity configuration and management tasks.  
+
 
 
 
