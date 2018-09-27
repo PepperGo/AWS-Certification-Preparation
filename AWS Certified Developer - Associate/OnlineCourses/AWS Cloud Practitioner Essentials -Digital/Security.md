@@ -3,7 +3,7 @@
 ### Conents
 * [Introduction to AWS Security](#introduction-to-aws-sercurity)  
 * [The AWS Shared Responsibility Model](#the-aws-shared-responsibility-model)  
-
+* [AWS Access Control and Management](#aws-access-control-and-management)
 
 ### Introduction to AWS Security
 ##### Keep your data safe
@@ -80,7 +80,58 @@ Customers can use AWS Service catalog to create and manage catalogs of IT servic
 AWS products that fall into the category of laaS, such as Amazon EC2, and Amazon VPC, are completely under the customer's control which requires them to perform all of the necessary sercurity configuration and management tasks.  
 
 
+### AWS Access Control and Management  
+AWS Identity and Access Management, or IAM, is a web service that helps you:  
+- Securely control access to AWS resoucers for you and your users.  
+- Authentication  
+  - Who can access resources  
+- Authorization  
+  - How they can use resources  
+- Compute  
+- Storage  
+- Database  
+- Application services  
 
+##### Access Control Concepts  
+User, Group, Permissions, Role  
+- Create users and groups  
+- Use permissions  
 
+#### IAM functionality  
+- Manage IAM users and their access  
+- Manage IAM roles and their permissions  
+- Manage federated users and their permissions  
 
+#### AWS Account Root User  
+AWS Account Root User: first create an AWS account, you begin with a single sign-in identity that has complete access to all AWS services and resources in the account. 
+Recommendations:  
+- Delete root user access keys  
+- Create an IAM user  
+- Grant administrator access  
+- Use those credentials  
+
+#### AWS Authentication  
+When adding users, you got to select how users will access AWS. There are two different types of access you can assign users:  
+1. Programmatic access  
+2. AWS Management Console access  
+
+##### Programmatic accesss 
+- Enables access key ID and secret access key  
+- For AWS API, CLI, SDK, and other development tools  
+
+##### Management Console access  
+- Sign-in to the AWS Management Console  
+- Uses AWS account name and password  
+- MFA(Multi-Factor Authentication) prompts for code  
+
+#### IAM Authorization  
+- After a user has been authenticated, they then have to be authorized to be able to access an AWS service.  
+- AWS IAM Policy  
+  - which is a document that explicitly lists permissions  
+  - One policy can be assigned to an IAM User, IAM Group, and IAM Roles  
+  
+#### Demonstration  
+Login to the AWS Mangement Console, create a user, assign the user to a group and apply permissions  
+
+Sercurity, Identity & Compliance -> IAM
 
