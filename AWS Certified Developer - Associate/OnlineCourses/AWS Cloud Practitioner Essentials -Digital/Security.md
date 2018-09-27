@@ -61,5 +61,23 @@
 - Complement AWS features and tools  
 
 ### The AWS Shared Responsibility Model  
+#### Under the cloud
+Under the shared responsibility model, AWS operates, manages, and controls the components from the host operating system and virtualization layer down to the physical security of the facilities in which the services operate.  
+It means that AWS is reponsible for protecting the global infrastructure that runs all of the services offered in the AWS cloud which include Regions, Availability Zones and Edge Locations.  
+For all the services, AWS will handle basic security tasks like guest operating system(OS) and database patching, firewall configuration, and disaster recovery.  
+
+#### In the Cloud  
+While the cloud infrastructure is secured and maintained by AWS, customers are responsible for security of everything they put in the cloud.  
+customers maintain complete control over their content and are responsible for managing critical content security requirements, including:  
+- What to store  
+- Which AWS services  
+- In what location  
+- Content format and structure  
+- Who has access to that content  
+- Access rights  
+
+
+
+
 
 
