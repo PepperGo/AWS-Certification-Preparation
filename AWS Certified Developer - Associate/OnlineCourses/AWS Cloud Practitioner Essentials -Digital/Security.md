@@ -4,6 +4,7 @@
 * [Introduction to AWS Security](#introduction-to-aws-sercurity)  
 * [The AWS Shared Responsibility Model](#the-aws-shared-responsibility-model)  
 * [AWS Access Control and Management](#aws-access-control-and-management)
+* [AWS Security Compliance Programs](#aws-security-compliance-programs)
 
 ### Introduction to AWS Security
 ##### Keep your data safe
@@ -134,4 +135,41 @@ When adding users, you got to select how users will access AWS. There are two di
 Login to the AWS Mangement Console, create a user, assign the user to a group and apply permissions  
 
 Sercurity, Identity & Compliance -> IAM
+
+### AWS Security Compliance Programs  
+AWS does communicate its security and control environment relevant to customers. AWS does this by doing the following:  
+- Obtaining industry certifications and independent third-party attestation.  
+- Publishing information about the AWS security and control practices in whitepapers and web site content.  
+- Providing certificates, reports, and other documentation directly to AWS customers under NDA as requird.  
+
+#### Assurance Programs  
+- Certifications/Attestations  
+- Laws, Regulation, and Privacy  
+- Alignments/Frameworks  
+
+#### AWS Risk and Compliance Programs  
+- Information about AWS controls  
+- Assist customers in documenting their framework  
+
+The AWS Risk and Compliance Program is made up of three components:  
+- Risk management  
+- Control environment  
+- Information security  
+
+##### Risk management  
+- Strategic business plan includes risk management  
+- Re-evaluated at least biannually  
+- Identify risks  
+- Implement appropriate measures  
+- Additional internal/external risk assessments  
+
+The AWS Compliance and Security teams have established an information security framework and policies based on the following governing bodies:  
+- COBIT  
+  - Control Objectives for Information and related Technology  
+- AICPA  
+  - American Institute of Certified Public Accountants  
+- NIST  
+  - National Institute of Standards and Technology   
+  
+
 
