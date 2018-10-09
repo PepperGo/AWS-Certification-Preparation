@@ -9,4 +9,6 @@ In this 100-level self-paced course, you’ll gain an overall understanding of t
 
 - [AWS Cloud Practitioner Essentials: Security](./Security.md)  
 
+- [AWS Cloud Practitioner Essentials: Architecting](./Architecting.md)
+
 
