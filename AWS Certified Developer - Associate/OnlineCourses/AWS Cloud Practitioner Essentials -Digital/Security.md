@@ -5,6 +5,7 @@
 * [The AWS Shared Responsibility Model](#the-aws-shared-responsibility-model)  
 * [AWS Access Control and Management](#aws-access-control-and-management)
 * [AWS Security Compliance Programs](#aws-security-compliance-programs)
+* [AWS Security Resources](#aws-security-resources)
 
 ### Introduction to AWS Security
 ##### Keep your data safe
