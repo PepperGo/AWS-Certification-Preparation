@@ -171,5 +171,58 @@ The AWS Compliance and Security teams have established an information security f
 - NIST  
   - National Institute of Standards and Technology   
   
+- AWS maintains the security policy  
+- Provides security training to employees  
+- Performs application security reviews  
+  - Confidentiality  
+  - Integrity 
+  - Availability of data  
+  - Conformance to IS policy  
+- Scan service endpoints for vulnerabilities  
+- Notifies for remediation of vulnerabilities  
+- Assessment by Independent security firms  
+- Not a replacement for customer scans  
+- Customers can request to scan cloud infrastructure  
+  - Limited to their instances  
+  - Within AWS Accepatable Use Policy  
+  
+##### Control Environment  
+- Includes policies, processes, control activities  
+- Secure delivery of AWS's service offerings  
+- Supports the operating effectiveness of AWS's control framework  
+- Integrates controls by leading cloud computing industry bodies  
+- AWS monitors for leading practices  
 
+##### Information Security  
+- Designed to protect  
+  - Confidentiality  
+  - Integrity  
+  - Availability   
+- Security whitepaper  
+
+##### Customer Compliance  
+- Governance over the entire IT control environment  
+- Understanding of required compliance objectives  
+- Establishment of a control environment  
+- Validation based risk tolerance  
+- Verification of effectiveness  
+
+Strong customer compliance and goverance might include the following basic approach:  
+- Review  
+  - Review information available from AWS together with other information to understand as much as of the entire IT environment as possible, and then document all compliance requirements   
+- Design  
+  - Design and implement control objectives to meet the enterprise compliance requirements   
+- Identify   
+  - Idnetify and documnent controls owned by outside parties  
+- Verify  
+  - Verify that all control objectives are met and all key controls are designed and operating effectively  
+  
+
+
+
+
+
+
+
+  
 
