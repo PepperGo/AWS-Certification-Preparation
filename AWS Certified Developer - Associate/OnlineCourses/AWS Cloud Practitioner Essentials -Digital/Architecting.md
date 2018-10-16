@@ -2,6 +2,8 @@
 
 ### Conents
 * [Introduction to the Well Architected Framework](#introduction-to-the-well-architected-framework)  
+* [Fault Tolerance and High Availability](#fault-tolerance-and-high-availability)  
+
 
 ### Introduction to the Well Architected Framework  
 Well-Architected Framework:  
@@ -158,5 +160,99 @@ Design Principles：
 5. Use managed services to reduce cost of ownership    
 - In the cloud, managed services remove the operational burden of maintaining servers for tasks like sending email or managing databases.  
 - And because managed services operate at cloud scale, they can offer a lower cost per transaction or service.  
+
+
+### Fault Tolerance and High Availability  
+- Fault Tolerance  
+	- the ability for a system to remian operational even if some of the componenets of that system fail.   
+	- It can be seen as the built-in redundancy of an application's components.     
+- High availability  
+	- is a concept regarding the entire system.    
+	- Its goal is to ensure that your systems are always functioning and accessible, and that downtime is minimized as much as possible, without the need for human intervention.    
+	- Even if a site is unavailable for a single minute, it can be crippling to a business.  
+
+Amazon Web Services provides tools to assist in these times of need.  
+- Build fault-tolerant, highly available systems  
+- Minimal human interaction  
+- Minimal up-front financial investment   
+
+
+#### On Premise VS AWS
+- Traditional(Ensuring high availability)  
+	- Very expensive  
+	- Only mission-critical applications    
+- AWS(Have options to expand availability and recoverability amongst whatever servers you choose)  
+	- Multiple servers  
+	- Availability Zones(AZ's)  
+	- Multiple Regions  
+	- Fault-tolerance seervices   
+	
+#### Some specific services can assist in ensuring high availability  
+- Elastic Load Balancers(ELB)  
+- Elastic IP address   
+- Amazon Route 53   
+- Auto Scaling  
+- Amazon CloudWatch  
+
+
+##### Elastic Load Balancers  
+- ELBs is a service that distributes incoming traffic or loads amongst your instances.  
+- ELB can also send metrics to Amazon CloudWatch, which is a managed monitoring service.  
+- ELB can be a trigger and notify you of high latency or if servers are becoming over-utilized.  
+- ELB can also be customized. For example, you can configure it to recongnize unhealthy or specific metrics on your instance. It can be public or internal-facing. It can use multiple different protocols.   
+
+##### Elastic IP addresses  
+- Elastic IP addresses are useful in providing greater fault-tolerance for your application.   
+- Elastic IPs are static IP addresses designed for dynamic cloud computing. This tool allows you to mask a failure of an instance or software by allowing your users to use the same IP addresses with replacement resources.  
+- Using Elastic IP addresses ensures high availability because your clients can still access your application even if your instance were to fail.   
+
+##### Amazon Route 53  
+- Amazon Route 53 is an authoritative DNS service from AWS.    
+- This is used to translate domain names into IP addresses.   
+- Amazon Route 53 is designed and maintained with the highest level of availability in mind.  
+- It was developed to support simple outing, latency-based routing, health checks and DNS failovers, and geolocation routing.  
+- All of these characteristics increase the availability of your customer-facing applications.  
+
+##### Auto Scaling  
+- Auto Scaling launches or terminates instances based on specified conditions.  
+- This service is designed to assist you in building a flexible system that can adjust and be modified depending on changes in customer demand.  
+- With auto scaling, you can avoid limitations of being able to create new resources. Instead, you can create new resources on demand or have scheduled provisioning.  
+- This ensures that your applications and systems are always available no matter what the load is.  
+- You can set provisions to scale up or down, depending on your policies.  
+
+##### Amazon CloudWatch
+- Amazon CloudWatch is a distributed statistics-gathering system.  
+- It collects and tracks your metrics of your applications.  
+- You have the ability to create and use your own custom metrics.  
+- If there is high latency or metrics that have passes the set threshold, CloudWatch can adjust automatically to ensure high availability of your architecture.     
+
+#### Some fault-tolerant tools    
+- Amazon Simple Queue Service(Amazon SQS)  
+- Amazon Simple Storage Service(Amazon S3)  
+- Amazon SimpleDB  
+- Amazon Relational Database Service  
+
+##### Amazon Simple Queue Service(Amazon SQS)  
+- It can be used as the backbone of your fault-tolerant application.    
+- It is a highly reliable distributed messaging system.  
+- Amazon SQS can help you ensure that your queue is always available.   
+
+
+##### Amazon Simple Storage Service(Amazon S3)  
+- It provides hihg durability and fault-tolerant data storage.  
+- It is a simple web service that you can utilize and only pay for the storage your use.  
+- Amazon S3 stores all of your data redundantly on multiple different devices across multiple facilities in a region, so if there was ever a failure, you will still have access to all of your information.  
+
+##### Amazon SimpleDB  
+- It is fault-tolerant and durable structured data storage solution.  
+- By using SimpleDB, you have full advantage to a scalable service and can avoid single points of failure due to its natural design for high availability and fault tolerance.  
+
+##### Amazon Relational Database Service(Amazon RDS)    
+- It is another web service tool to use in regards to relational databases.  
+- It provides high availability and fault tolerance by offering several features to enhance the reliability of your critical databases.   
+- Some of these features include automated backups, snapshots, and multi-Availability Zone deployments. 
+
+
+All of these different services are highly reliable, highly durable, and fault-tolerant tools for your applications to ensure high availability and fault-tolerant systems.  
 
 
