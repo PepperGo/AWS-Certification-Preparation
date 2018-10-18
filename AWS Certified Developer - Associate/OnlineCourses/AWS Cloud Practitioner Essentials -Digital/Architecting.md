@@ -3,6 +3,7 @@
 ### Conents
 * [Introduction to the Well Architected Framework](#introduction-to-the-well-architected-framework)  
 * [Fault Tolerance and High Availability](#fault-tolerance-and-high-availability)  
+* [Web Hosting](#web-hosting)
 
 
 ### Introduction to the Well Architected Framework  
@@ -254,5 +255,82 @@ Amazon Web Services provides tools to assist in these times of need.
 
 
 All of these different services are highly reliable, highly durable, and fault-tolerant tools for your applications to ensure high availability and fault-tolerant systems.  
+
+### Web Hosting
+Web hosting on AWS cloud is fast, simple, easy, and low cost.   
+
+Some of the web applications that can be hosted include a company's website, content management systems, if you're developing social media apps, or an internal SharePoint site.  
+
+#### Issues and solutions
+##### Cost-Efficient
+A common dilemma: regarding peaks and how to handle peaks in a cost-effectent manner  
+AWS can do:  
+- On-demand provisioning  
+- Precents wasted capactity   
+
+##### Scalable  
+AWS can do:  
+- Auto-scaling prevents response failures  
+- Utilized in minutes  
+
+##### On-demand(like testing resources)    
+AWS can do:  
+- Provision testing fleets  
+- Develop staging in minutes  
+- Simulate user traffic during load testing   
+
+
+#### Web Hosting Services  
+- Products to assist transition(From traditional web hosting architecture to AWS cloud)  
+	- Amazon Virtual Private Cloud  
+	- Amazon Route 53  
+	- Amazon CloudFront  
+	- Elastic CloudFront  
+	- Firewalls/AWS shield  
+	- Auto Scaling  
+	- App Servers/EC2 instances  
+	- Amazon ElastiCache  
+	- Amazon RDS/ Amazon DynamoDB  
+	
+	
+#### Key Architectural Considerations  
+- No more physical network appliances    
+	- You can no longer have your firewalls, routers and load balancers for your AWS applications on physical devices  
+	- but instead must be replaced with software solutions  
+- Firewalls everywhere  
+	- AWS enforces a more secure model and thus makes sure every host is locked down.
+	- You can create security groups to allow and deny specific traffic, but those policies must be put into place  
+- Consider multiple data centers  
+	- With the use of availability zones and AWS Regions, you can easily deploy your applications across these locations to ensure high availability and reliability  
+- Hosts  
+	- With AWS, your hosts should be ephemeral and dynamic  
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
