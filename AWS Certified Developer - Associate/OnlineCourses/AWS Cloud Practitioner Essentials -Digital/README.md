@@ -11,4 +11,4 @@ In this 100-level self-paced course, you’ll gain an overall understanding of t
 
 - [AWS Cloud Practitioner Essentials: Architecting](./Architecting.md)
 
-
+- [AWS Cloud Practitioner Essentials: Pricing and Support](./Pricing%20and%20Support )
